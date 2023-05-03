@@ -48,17 +48,17 @@
             this.TxtId = new System.Windows.Forms.TextBox();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProvaiders)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnNew
             // 
             this.BtnNew.Image = global::supermarekt.Properties.Resources._new;
-            this.BtnNew.Location = new System.Drawing.Point(676, 188);
+            this.BtnNew.Location = new System.Drawing.Point(635, 188);
             this.BtnNew.Name = "BtnNew";
             this.BtnNew.Size = new System.Drawing.Size(75, 52);
             this.BtnNew.TabIndex = 0;
@@ -68,7 +68,7 @@
             // BtnEdit
             // 
             this.BtnEdit.Image = global::supermarekt.Properties.Resources.edit;
-            this.BtnEdit.Location = new System.Drawing.Point(676, 246);
+            this.BtnEdit.Location = new System.Drawing.Point(635, 246);
             this.BtnEdit.Name = "BtnEdit";
             this.BtnEdit.Size = new System.Drawing.Size(75, 52);
             this.BtnEdit.TabIndex = 1;
@@ -78,7 +78,7 @@
             // BtnClose
             // 
             this.BtnClose.Image = global::supermarekt.Properties.Resources.cerrar;
-            this.BtnClose.Location = new System.Drawing.Point(676, 367);
+            this.BtnClose.Location = new System.Drawing.Point(635, 367);
             this.BtnClose.Name = "BtnClose";
             this.BtnClose.Size = new System.Drawing.Size(75, 61);
             this.BtnClose.TabIndex = 2;
@@ -88,7 +88,7 @@
             // BtnDelete
             // 
             this.BtnDelete.Image = global::supermarekt.Properties.Resources.delete;
-            this.BtnDelete.Location = new System.Drawing.Point(676, 304);
+            this.BtnDelete.Location = new System.Drawing.Point(635, 304);
             this.BtnDelete.Name = "BtnDelete";
             this.BtnDelete.Size = new System.Drawing.Size(75, 57);
             this.BtnDelete.TabIndex = 3;
@@ -138,18 +138,18 @@
             this.dataGridViewProvaiders.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.Name,
+            this.LastName,
             this.Address,
             this.Phone,
-            this.Email,
-            this.LastName});
+            this.Email});
             this.dataGridViewProvaiders.Location = new System.Drawing.Point(12, 188);
             this.dataGridViewProvaiders.Name = "dataGridViewProvaiders";
             this.dataGridViewProvaiders.ReadOnly = true;
             this.dataGridViewProvaiders.RowTemplate.Height = 25;
-            this.dataGridViewProvaiders.Size = new System.Drawing.Size(642, 240);
+            this.dataGridViewProvaiders.Size = new System.Drawing.Size(617, 240);
             this.dataGridViewProvaiders.TabIndex = 8;
             this.dataGridViewProvaiders.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewProvaiders_CellClick);
-            this.dataGridViewProvaiders.Click += new System.EventHandler(this.dataGridViewProvaiders_Click);
+            this.dataGridViewProvaiders.Click += new System.EventHandler(this.dataGridViewProvaiders_Click_1);
             // 
             // label5
             // 
@@ -225,36 +225,42 @@
             this.Id.HeaderText = "Id";
             this.Id.Name = "Id";
             this.Id.ReadOnly = true;
+            this.Id.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // Name
             // 
             this.Name.HeaderText = "Name";
             this.Name.Name = "Name";
             this.Name.ReadOnly = true;
-            // 
-            // Address
-            // 
-            this.Address.HeaderText = "LastName";
-            this.Address.Name = "Address";
-            this.Address.ReadOnly = true;
-            // 
-            // Phone
-            // 
-            this.Phone.HeaderText = "Address";
-            this.Phone.Name = "Phone";
-            this.Phone.ReadOnly = true;
-            // 
-            // Email
-            // 
-            this.Email.HeaderText = "Phone";
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
+            this.Name.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // LastName
             // 
-            this.LastName.HeaderText = "Email";
+            this.LastName.HeaderText = "LastName";
             this.LastName.Name = "LastName";
             this.LastName.ReadOnly = true;
+            this.LastName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Address
+            // 
+            this.Address.HeaderText = "Address";
+            this.Address.Name = "Address";
+            this.Address.ReadOnly = true;
+            this.Address.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Phone
+            // 
+            this.Phone.HeaderText = "Phone";
+            this.Phone.Name = "Phone";
+            this.Phone.ReadOnly = true;
+            this.Phone.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Email
+            // 
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            this.Email.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // FormProvaiders
             // 
@@ -280,7 +286,7 @@
             this.Controls.Add(this.BtnClose);
             this.Controls.Add(this.BtnEdit);
             this.Controls.Add(this.BtnNew);
-            this.Name = "FormProvaiders";
+           
             this.Text = "FormProvaiders";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProvaiders)).EndInit();
             this.ResumeLayout(false);
@@ -310,9 +316,9 @@
         private TextBox TxtId;
         private DataGridViewTextBoxColumn Id;
         private DataGridViewTextBoxColumn Name;
+        private DataGridViewTextBoxColumn LastName;
         private DataGridViewTextBoxColumn Address;
         private DataGridViewTextBoxColumn Phone;
         private DataGridViewTextBoxColumn Email;
-        private DataGridViewTextBoxColumn LastName;
     }
 }

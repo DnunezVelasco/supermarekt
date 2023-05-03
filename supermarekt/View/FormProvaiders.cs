@@ -85,7 +85,7 @@ namespace supermarekt.View
             }
             if (IsNew == true)
             {
-                PayModelProvaiders payModelProvaiders = new(null, TxtName.Name ,TxtAddress.Text, );
+                PayModelProvaiders payModelProvaiders = new(null, TxtName.Name ,TxtLastName.Text,TxtAddress.Text, Int32.Parse(TxtPhone.Text),TxtEmail.Text);
                 if (payModeProvaidersDAO.AddPayModelProduct(payModelProvaiders) == false)
                 {
                     MessageBox.Show("Error to save", "Alert",
@@ -109,10 +109,11 @@ namespace supermarekt.View
                         return false;
                     }
                     payModelProvaiders.Name = TxtName.Text;
+                    payModelProvaiders.LastName = TxtLastName.Text;
                     payModelProvaiders.Address = TxtAddress.Text;
                     payModelProvaiders.Phone = Int32.Parse(TxtPhone.Text);
                     payModelProvaiders.Email = TxtEmail.Text;
-                    payModelProvaiders.LastName = TxtLastName.Text;
+                   
 
                     payModeProvaidersDAO.UpdatePayModelProduct(id, payModelProvaiders);
                     LoadPayModeList();
@@ -161,9 +162,10 @@ namespace supermarekt.View
             }
             TxtId.Text = "";
             TxtName.Text = "";
+            TxtLastName.Text = "";
             TxtPhone.Text = "";
             TxtAddress.Text = "";
-            TxtLastName.Text = "";
+          
             ActivateControls(EditMode);
         }
 
@@ -235,6 +237,11 @@ namespace supermarekt.View
         }
 
         private void dataGridViewProvaiders_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void dataGridViewProvaiders_Click_1(object sender, EventArgs e)
         {
             TxtId.Text = dataGridViewProvaiders.CurrentRow.Cells[0].Value.ToString();
             TxtName.Text = dataGridViewProvaiders.CurrentRow.Cells[1].Value.ToString();
