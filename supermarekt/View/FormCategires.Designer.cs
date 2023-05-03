@@ -188,6 +188,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Chocolate;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.BtnClose);
             this.Controls.Add(this.BtnDelete);
@@ -195,7 +196,9 @@
             this.Controls.Add(this.BtnNew);
             this.Controls.Add(this.DataGridViewCategories);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormCategires";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormCategires";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -28,7 +28,7 @@ namespace supermarekt.View
             LoadPayModeList();
             EditMode = false;
             IsNew = false;
-            DataGridViewCategories.CellValueChanged += DataGridViewCategories_CellValueChanged;
+           
         }
 
        

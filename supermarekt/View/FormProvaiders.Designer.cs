@@ -46,12 +46,11 @@
             this.TxtAddress = new System.Windows.Forms.TextBox();
             this.TxtEmail = new System.Windows.Forms.TextBox();
             this.TxtId = new System.Windows.Forms.TextBox();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.E = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProvaiders)).BeginInit();
             this.SuspendLayout();
             // 
@@ -136,12 +135,11 @@
             this.dataGridViewProvaiders.AllowUserToDeleteRows = false;
             this.dataGridViewProvaiders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewProvaiders.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
-            this.Name,
-            this.LastName,
-            this.Address,
-            this.Phone,
-            this.Email});
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.E});
             this.dataGridViewProvaiders.Location = new System.Drawing.Point(12, 188);
             this.dataGridViewProvaiders.Name = "dataGridViewProvaiders";
             this.dataGridViewProvaiders.ReadOnly = true;
@@ -149,6 +147,7 @@
             this.dataGridViewProvaiders.Size = new System.Drawing.Size(617, 240);
             this.dataGridViewProvaiders.TabIndex = 8;
             this.dataGridViewProvaiders.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewProvaiders_CellClick);
+            this.dataGridViewProvaiders.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewProvaiders_CellContentClick);
             this.dataGridViewProvaiders.Click += new System.EventHandler(this.dataGridViewProvaiders_Click_1);
             // 
             // label5
@@ -180,6 +179,7 @@
             // 
             // TxtName
             // 
+            this.TxtName.Enabled = false;
             this.TxtName.Location = new System.Drawing.Point(153, 27);
             this.TxtName.Name = "TxtName";
             this.TxtName.Size = new System.Drawing.Size(111, 23);
@@ -187,6 +187,7 @@
             // 
             // TxtLastName
             // 
+            this.TxtLastName.Enabled = false;
             this.TxtLastName.Location = new System.Drawing.Point(153, 56);
             this.TxtLastName.Name = "TxtLastName";
             this.TxtLastName.Size = new System.Drawing.Size(111, 23);
@@ -194,6 +195,7 @@
             // 
             // TxtPhone
             // 
+            this.TxtPhone.Enabled = false;
             this.TxtPhone.Location = new System.Drawing.Point(153, 121);
             this.TxtPhone.Name = "TxtPhone";
             this.TxtPhone.Size = new System.Drawing.Size(111, 23);
@@ -201,6 +203,7 @@
             // 
             // TxtAddress
             // 
+            this.TxtAddress.Enabled = false;
             this.TxtAddress.Location = new System.Drawing.Point(153, 85);
             this.TxtAddress.Name = "TxtAddress";
             this.TxtAddress.Size = new System.Drawing.Size(111, 23);
@@ -208,6 +211,7 @@
             // 
             // TxtEmail
             // 
+            this.TxtEmail.Enabled = false;
             this.TxtEmail.Location = new System.Drawing.Point(153, 159);
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.Size = new System.Drawing.Size(111, 23);
@@ -215,52 +219,46 @@
             // 
             // TxtId
             // 
+            this.TxtId.Enabled = false;
             this.TxtId.Location = new System.Drawing.Point(153, 1);
             this.TxtId.Name = "TxtId";
             this.TxtId.Size = new System.Drawing.Size(35, 23);
             this.TxtId.TabIndex = 17;
             // 
-            // Id
+            // Column1
             // 
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column1.HeaderText = "Id";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // Name
+            // Column2
             // 
-            this.Name.HeaderText = "Name";
-            this.Name.Name = "Name";
-            this.Name.ReadOnly = true;
-            this.Name.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column2.HeaderText = "Name";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // LastName
+            // Column3
             // 
-            this.LastName.HeaderText = "LastName";
-            this.LastName.Name = "LastName";
-            this.LastName.ReadOnly = true;
-            this.LastName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column3.HeaderText = "Address";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // Address
+            // Column4
             // 
-            this.Address.HeaderText = "Address";
-            this.Address.Name = "Address";
-            this.Address.ReadOnly = true;
-            this.Address.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column4.HeaderText = "Phone";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // Phone
+            // E
             // 
-            this.Phone.HeaderText = "Phone";
-            this.Phone.Name = "Phone";
-            this.Phone.ReadOnly = true;
-            this.Phone.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Email
-            // 
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            this.Email.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.E.HeaderText = "Email";
+            this.E.Name = "E";
+            this.E.ReadOnly = true;
+            this.E.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // FormProvaiders
             // 
@@ -286,7 +284,9 @@
             this.Controls.Add(this.BtnClose);
             this.Controls.Add(this.BtnEdit);
             this.Controls.Add(this.BtnNew);
-           
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Name = "FormProvaiders";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormProvaiders";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProvaiders)).EndInit();
             this.ResumeLayout(false);
@@ -314,11 +314,10 @@
         private TextBox TxtAddress;
         private TextBox TxtEmail;
         private TextBox TxtId;
-        private DataGridViewTextBoxColumn Id;
-        private DataGridViewTextBoxColumn Name;
-        private DataGridViewTextBoxColumn LastName;
-        private DataGridViewTextBoxColumn Address;
-        private DataGridViewTextBoxColumn Phone;
-        private DataGridViewTextBoxColumn Email;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn E;
     }
 }

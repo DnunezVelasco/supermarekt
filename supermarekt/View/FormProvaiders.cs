@@ -85,7 +85,7 @@ namespace supermarekt.View
             }
             if (IsNew == true)
             {
-                PayModelProvaiders payModelProvaiders = new(null, TxtName.Name ,TxtLastName.Text,TxtAddress.Text, Int32.Parse(TxtPhone.Text),TxtEmail.Text);
+                PayModelProvaiders payModelProvaiders = new(null, TxtName.Text ,TxtLastName.Text,TxtAddress.Text, Int32.Parse(TxtPhone.Text),TxtEmail.Text);
                 if (payModeProvaidersDAO.AddPayModelProduct(payModelProvaiders) == false)
                 {
                     MessageBox.Show("Error to save", "Alert",
@@ -165,6 +165,7 @@ namespace supermarekt.View
             TxtLastName.Text = "";
             TxtPhone.Text = "";
             TxtAddress.Text = "";
+            TxtEmail.Text = "";
           
             ActivateControls(EditMode);
         }
@@ -238,17 +239,22 @@ namespace supermarekt.View
 
         private void dataGridViewProvaiders_Click(object sender, EventArgs e)
         {
-          
-        }
-
-        private void dataGridViewProvaiders_Click_1(object sender, EventArgs e)
-        {
             TxtId.Text = dataGridViewProvaiders.CurrentRow.Cells[0].Value.ToString();
             TxtName.Text = dataGridViewProvaiders.CurrentRow.Cells[1].Value.ToString();
             TxtLastName.Text = dataGridViewProvaiders.CurrentRow.Cells[2].Value.ToString();
             TxtAddress.Text = dataGridViewProvaiders.CurrentRow.Cells[3].Value.ToString();
             TxtPhone.Text = dataGridViewProvaiders.CurrentRow.Cells[4].Value.ToString();
             TxtEmail.Text = dataGridViewProvaiders.CurrentRow.Cells[5].Value.ToString();
+        }
+
+        private void dataGridViewProvaiders_Click_1(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void dataGridViewProvaiders_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
